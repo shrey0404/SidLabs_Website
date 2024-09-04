@@ -1,0 +1,181 @@
+/* src/components/Testinomial.css */
+
+.testinomial-section {
+    display: flex;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    color: #fff;
+    align-items: center;
+    flex-wrap: wrap; /* Allows wrapping of content on smaller screens */
+  }
+  
+  .testinomial-content {
+    flex: 1;
+    padding-right: 2rem;
+    min-width: 300px; /* Ensures the content doesn't get too narrow */
+  }
+  
+  .testinomial-header {
+    font-size: 3.5rem; /* Increased font size */
+    margin-bottom: 1rem;
+    color: #f0f0f0;
+  }
+  
+  .testinomial-subheader {
+    font-size: 2rem; /* Increased font size */
+    margin-bottom: 1rem;
+    color: #ddd;
+  }
+  
+  .testinomial-description {
+    font-size: 1.2rem; /* Increased font size */
+    margin-bottom: 1rem;
+    color: #bbb;
+    line-height: 1.6;
+  }
+  
+  .testinomial-cards {
+    display: flex;
+    overflow: hidden; /* Hide overflow to maintain animation */
+    position: relative;
+    gap: 2rem;
+    flex-wrap: wrap; /* Allows wrapping of cards on smaller screens */
+    justify-content: center; /* Center align cards */
+  }
+  
+  .comment-card {
+    position: relative;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+    border-radius: 20px; /* Increased border radius */
+    padding: 2rem; /* Increased padding */
+    color: #fff;
+    box-shadow: 0px 0px 20px rgba(209, 38, 197, 0.5); /* Increased box shadow */
+    width: 100%;
+    max-width: 350px; /* Increased max-width */
+    animation: moveCard 15s linear infinite; /* Apply animation */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+  }
+  
+  .comment-card::before {
+    content: '“'; /* Double quote icon */
+    font-size: 4rem; /* Increased font size for double quote */
+    color: #ddd;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+  }
+  
+  .comment-text {
+    margin-bottom: 1.5rem; /* Increased margin-bottom */
+    font-size: 1.2rem; /* Increased font size */
+    padding: 1rem;
+    line-height: 2rem;
+  }
+  
+  .commenter-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .commenter-name {
+    font-size: 1.4rem; /* Increased font size */
+  }
+  
+  .rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star-icon {
+    font-size: 1.5rem; /* Increased font size */
+    color: #ffd700; /* Gold color for stars */
+    margin-right: 0.5rem;
+  }
+  
+  .rating-number {
+    font-size: 1.4rem; /* Increased font size */
+  }
+  
+  /* Infinite Moving Cards Animation */
+  @keyframes moveCard {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Responsive Styles */
+  
+  /* For medium screens (tablets) */
+  @media (max-width: 768px) {
+    .testinomial-header {
+      font-size: 2.5rem;
+    }
+  
+    .testinomial-subheader {
+      font-size: 1.5rem;
+    }
+  
+    .testinomial-description {
+      font-size: 1rem;
+    }
+  
+    .testinomial-cards {
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    .comment-card {
+      max-width: 90%;
+      padding: 1rem;
+    }
+  
+    .comment-text {
+      font-size: 1rem;
+    }
+  
+    .commenter-name {
+      font-size: 1.2rem;
+    }
+  
+    .rating-number {
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* For small screens (mobile phones) */
+  @media (max-width: 576px) {
+    .testinomial-header {
+      font-size: 2rem;
+    }
+  
+    .testinomial-subheader {
+      font-size: 1.2rem;
+    }
+  
+    .testinomial-description {
+      font-size: 0.875rem;
+    }
+  
+    .comment-card {
+      max-width: 100%;
+      padding: 0.5rem;
+    }
+  
+    .comment-text {
+      font-size: 0.875rem;
+    }
+  
+    .commenter-name {
+      font-size: 1rem;
+    }
+  
+    .rating-number {
+      font-size: 1rem;
+    }
+  }
+  

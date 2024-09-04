@@ -1,0 +1,124 @@
+/* src/components/Navbar.css */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 1.5rem;
+    background-color: #1a1a1a; /* Dark background */
+    color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background-color: #333; /* Slightly lighter on hover */
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem; /* Increased padding for better click area */
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    background-color: #444; /* Darker background on hover */
+    color: #f0f0f0; /* Light text color on hover */
+    transform: scale(1.1); /* Slightly larger on hover */
+}
+
+/* Add a highlight effect to the active link */
+.nav-links a.active {
+    color: #f39c12; /* Highlight color for active link */
+    font-weight: bold;
+}
+
+/* Optional underline effect */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px; /* Space between text and underline */
+    width: 0;
+    height: 2px;
+    background: #f39c12; /* Highlight color */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+    left: 0;
+}
+
+
+/* src/components/Navbar.css */
+
+/* Existing styles remain unchanged */
+
+/* Media Query for Screens Smaller than 768px */
+@media (max-width: 768px) {
+    .navbar {
+      flex-direction: column; /* Stack items vertically */
+      padding: 1rem;
+    }
+  
+    .logo {
+      font-size: 1.2rem; /* Smaller logo font size on mobile */
+    }
+  
+    .nav-links {
+      display: none; /* Hide nav links by default */
+      flex-direction: column; /* Stack links vertically */
+      width: 100%; /* Full width for mobile */
+      padding: 1rem 0;
+      margin-top: 1rem;
+    }
+  
+    .nav-links.active {
+      display: flex; /* Show nav links when menu is toggled */
+    }
+  
+    .nav-links li {
+      margin: 0.5rem 0; /* Add space between links */
+    }
+  
+    .nav-links a {
+      font-size: 1.2rem; /* Larger font size for better readability */
+      padding: 1rem; /* Increased padding for mobile */
+      text-align: center; /* Center align text */
+    }
+  
+    .navbar .menu-toggle {
+      display: block; /* Show the menu toggle button on mobile */
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+  
+  /* Optional styles for the menu toggle button */
+  .menu-toggle {
+    display: none; /* Hide by default, will be displayed on mobile */
+  }
+  
