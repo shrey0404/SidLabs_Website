@@ -225,3 +225,232 @@
     color: #ddd;
   }
   
+
+  /* Responsive Styles */
+@media screen and (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    text-align: center; /* Center the text for smaller screens */
+  }
+
+  .about-image {
+    margin: 0 auto 2rem auto; /* Center the image and add space below */
+    width: 80%; /* Adjust image size for smaller screens */
+  }
+
+  .about-content {
+    padding: 0 2rem;
+  }
+
+  .about-content h2 {
+    margin-left: 0;
+    font-size: 2.5rem;
+  }
+
+  .about-content p {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-content p {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .about-image {
+    width: 100%; /* Full width for very small screens */
+  }
+}
+
+/* Team Section Responsiveness */
+@media screen and (max-width: 1024px) {
+  .team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 80%; /* Make team cards take up more width */
+    margin-bottom: 2rem; /* Add space between team cards */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team-card {
+    width: 100%; /* Full width for very small screens */
+  }
+
+  .team-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .team-card h5 {
+    font-size: 1rem;
+  }
+}
+
+
+/* Responsive Styles for About and Team Sections */
+@media screen and (max-width: 1024px) {
+  .about-section {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    text-align: center;
+  }
+
+  .about-image {
+    margin: 0 auto 2rem auto;
+    width: 80%;
+  }
+
+  .about-content {
+    padding: 0 2rem;
+  }
+
+  .about-content h2 {
+    margin-left: 0;
+    font-size: 2.5rem;
+  }
+
+  .about-content p {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-content p {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .about-image {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .team-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .team-card {
+    width: 80%;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .team-card {
+    width: 100%;
+  }
+
+  .team-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .team-card h5 {
+    font-size: 1rem;
+  }
+}
+
+/* Responsive Styles for Full Width Content */
+@media screen and (max-width: 1024px) {
+  .full-width-content {
+    padding: 2rem 1.5rem;
+    text-align: center;
+  }
+
+  .full-width-content h2 {
+    font-size: 2rem;
+  }
+
+  .full-width-content p {
+    font-size: 1rem;
+    padding: 0 1.5rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .full-width-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .full-width-content p {
+    font-size: 0.9rem;
+  }
+}
+
+
+/* Full Width Content Responsive Styles */
+.full-width-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 2rem;
+  margin: 0 auto;
+  max-width: 1200px; /* Set a maximum width to contain the content */
+  box-sizing: border-box;
+}
+
+.full-width-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  text-align: center; /* Center the heading */
+}
+
+.full-width-content p {
+  font-size: 1.25rem;
+  margin: 1rem 0;
+  text-align: center; /* Center the paragraphs */
+  line-height: 1.5;
+  max-width: 100%; /* Ensure the text wraps within the container */
+}
+
+@media screen and (max-width: 1024px) {
+  .full-width-content {
+    padding: 2rem 1.5rem;
+  }
+
+  .full-width-content h2 {
+    font-size: 2rem;
+  }
+
+  .full-width-content p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .full-width-content {
+    padding: 1.5rem 1rem;
+  }
+
+  .full-width-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .full-width-content p {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .full-width-content {
+    padding: 1rem 0.5rem;
+  }
+
+  .full-width-content h2 {
+    font-size: 1.25rem;
+  }
+
+  .full-width-content p {
+    font-size: 0.85rem;
+  }
+}

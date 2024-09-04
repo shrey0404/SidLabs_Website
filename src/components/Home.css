@@ -392,3 +392,260 @@
       transform: translateY(0);
   }
 }
+
+
+.flagship-projects-section {
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #1a1a1a, #333, #1a1a1a); /* Dark background */
+    color: #fff; /* Light text */
+    text-align: left; /* Align heading to the left */
+    position: relative; /* Added for positioning cards diagonally */
+}
+
+.flagship-heading {
+    margin-bottom: 2rem;
+}
+
+.flagship-heading h2 {
+    font-size: 3rem; /* Increase the font size */
+    margin-bottom: 0.1rem; /* Spacing below h2 */
+    color: rgb(252, 135, 135); /* Color for heading */
+}
+
+.flagship-heading p {
+    font-size: 1.5rem; /* Font size for the paragraph */
+    margin-top: 1rem; /* Spacing above the paragraph */
+}
+
+.project-cards {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    height: 600px; /* Adjust as needed */
+}
+
+.project-card {
+    position: absolute;
+    width: 350px; /* Increased width */
+    height: 250px; /* Increased height */
+}
+
+.project-card:nth-child(1) {
+    right: 0;
+    transform: translateY(0);
+}
+
+.project-card:nth-child(2) {
+    left: 50%;
+    transform: translateX(-50%) translateY(100px); /* Center and move down */
+}
+
+.project-card:nth-child(3) {
+    left: 0;
+    transform: translateY(200px); /* Move down further */
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #444;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    perspective: 1000px;
+    box-shadow: 0 0 0 5px #ffffff80;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card img {
+    width: 99%;
+    fill: #fff;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+
+.card__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #444;
+    transform: rotateX(-90deg);
+    transform-origin: bottom;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.card:hover .card__content {
+    transform: rotateX(0deg);
+}
+
+.card__title {
+    margin: 0;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.card__description {
+    margin: 10px 0 0;
+    font-size: 14px;
+    color: #bbb;
+    line-height: 1.4;
+}
+
+/* Card link styles */
+.card__link {
+    display: block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.card__link:hover {
+    background-color: #555; /* Lighter background on hover */
+}
+
+
+
+/* Responsive Styles */
+
+/* Adjust heading and card layout for medium screens */
+@media (max-width: 1200px) {
+    .flagship-heading h2 {
+        font-size: 2.5rem; /* Reduce font size for medium screens */
+    }
+
+    .flagship-heading p {
+        font-size: 1.25rem; /* Adjust font size */
+    }
+
+    .project-cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+        gap: 2rem; /* Maintain gap between cards */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .project-card {
+        width: 100%; /* Full width for medium screens */
+        max-width: 600px; /* Set max width for better layout */
+        position: relative; /* Reset position */
+        transform: none; /* Reset transform */
+    }
+}
+
+/* Adjust heading, card size, and layout for small screens */
+@media (max-width: 768px) {
+    .flagship-heading h2 {
+        font-size: 2rem; /* Further reduce font size */
+    }
+
+    .flagship-heading p {
+        font-size: 1rem; /* Adjust font size */
+    }
+
+    .project-cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+        gap: 1.5rem; /* Maintain gap between cards */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .project-card {
+        width: 90%; /* Slightly smaller width for small screens */
+        max-width: 500px; /* Set max width for better layout */
+        position: relative; /* Reset position */
+        transform: none; /* Reset transform */
+    }
+}
+
+/* Adjust heading, card size, and layout for extra-small screens */
+@media (max-width: 480px) {
+    .flagship-heading h2 {
+        font-size: 1.5rem; /* Further reduce font size */
+    }
+
+    .flagship-heading p {
+        font-size: 0.875rem; /* Adjust font size */
+    }
+
+    .project-cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+        gap: 1rem; /* Maintain gap between cards */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .project-card {
+        width: 100%; /* Full width for extra-small screens */
+        max-width: 100%; /* No max width restriction */
+        position: relative; /* Reset position */
+        transform: none; /* Reset transform */
+    }
+
+    .card__title {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    .card__description {
+        font-size: 12px; /* Adjust font size */
+    }
+}
+
+/* Base styles for FlagshipProjects */
+.flagship-projects-section {
+    position: relative;
+    padding: 5rem 2rem;
+    margin-bottom: 4rem; /* Initial margin-bottom */
+    text-align: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .flagship-projects-section {
+        margin-bottom: 6rem; /* Increase margin-bottom on medium screens */
+        padding: 4rem 1.5rem; /* Adjust padding for better spacing */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flagship-projects-section {
+        margin-bottom: 8rem; /* Further increase margin-bottom on smaller screens */
+        padding: 3rem 1rem; /* Reduce padding to maintain content alignment */
+    }
+
+    #last-card {
+      margin-bottom: 8rem; /* Further increase margin-bottom on smaller screens */
+        padding: 3rem 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .flagship-projects-section {
+        margin-bottom: 10rem; /* Maximum margin-bottom for the smallest screens */
+        padding: 2.5rem 0.5rem; /* Further adjust padding for mobile devices */
+    }
+
+
+    #last-card {
+      margin-bottom: 8rem; /* Further increase margin-bottom on smaller screens */
+        padding: 3rem 1rem;
+    }
+}

@@ -127,6 +127,7 @@
 }
 
 
+
 /* Responsive Styles */
 
 /* Adjust heading and card layout for medium screens */
@@ -142,19 +143,14 @@
     .project-cards {
         flex-direction: column; /* Stack cards vertically */
         align-items: center; /* Center align cards */
-        gap: 1rem; /* Reduce gap between cards */
+        gap: 2rem; /* Maintain gap between cards */
         height: auto; /* Allow height to adjust */
     }
 
     .project-card {
-        width: 90%; /* Increase width for smaller screens */
-        max-width: none; /* Remove max-width for flexibility */
-    }
-
-    .project-card:nth-child(1),
-    .project-card:nth-child(2),
-    .project-card:nth-child(3) {
-        position: relative; /* Reset position for stacking */
+        width: 100%; /* Full width for medium screens */
+        max-width: 600px; /* Set max width for better layout */
+        position: relative; /* Reset position */
         transform: none; /* Reset transform */
     }
 }
@@ -172,19 +168,14 @@
     .project-cards {
         flex-direction: column; /* Stack cards vertically */
         align-items: center; /* Center align cards */
-        gap: 1rem; /* Reduce gap between cards */
+        gap: 1.5rem; /* Maintain gap between cards */
         height: auto; /* Allow height to adjust */
     }
 
     .project-card {
-        width: 100%; /* Full width for small screens */
-        max-width: none; /* Remove max-width */
-    }
-
-    .project-card:nth-child(1),
-    .project-card:nth-child(2),
-    .project-card:nth-child(3) {
-        position: relative; /* Reset position for stacking */
+        width: 90%; /* Slightly smaller width for small screens */
+        max-width: 500px; /* Set max width for better layout */
+        position: relative; /* Reset position */
         transform: none; /* Reset transform */
     }
 }
@@ -199,11 +190,55 @@
         font-size: 0.875rem; /* Adjust font size */
     }
 
+    .project-cards {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center; /* Center align cards */
+        gap: 1rem; /* Maintain gap between cards */
+        height: auto; /* Allow height to adjust */
+    }
+
+    .project-card {
+        width: 100%; /* Full width for extra-small screens */
+        max-width: 100%; /* No max width restriction */
+        position: relative; /* Reset position */
+        transform: none; /* Reset transform */
+    }
+
     .card__title {
         font-size: 20px; /* Adjust font size */
     }
 
     .card__description {
         font-size: 12px; /* Adjust font size */
+    }
+}
+
+/* Base styles for FlagshipProjects */
+.flagship-projects-section {
+    position: relative;
+    padding: 5rem 2rem;
+    margin-bottom: 4rem; /* Initial margin-bottom */
+    text-align: center;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1024px) {
+    .flagship-projects-section {
+        margin-bottom: 6rem; /* Increase margin-bottom on medium screens */
+        padding: 4rem 1.5rem; /* Adjust padding for better spacing */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .flagship-projects-section {
+        margin-bottom: 8rem; /* Further increase margin-bottom on smaller screens */
+        padding: 3rem 1rem; /* Reduce padding to maintain content alignment */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .flagship-projects-section {
+        margin-bottom: 10rem; /* Maximum margin-bottom for the smallest screens */
+        padding: 2.5rem 0.5rem; /* Further adjust padding for mobile devices */
     }
 }

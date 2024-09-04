@@ -110,7 +110,7 @@ const Home = () => {
             >
               <div className="card">
                 <img src={project3} alt="project-image" />
-                <div className="card__content">
+                <div className="card__content" id="last-card">
                   <p className="card__title">CARE Platform</p>
                   <p className="card__description">
                     CARE utilizes a comprehensive framework to evaluate and
